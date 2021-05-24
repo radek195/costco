@@ -6,3 +6,10 @@ $light-color: #e2e4f1;
 $tablet: "(min-width: 701px)";
 $smallDesktop: "(min-width: 1001px)";
 $desktop: "(min-width: 1401px)";
+
+//
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

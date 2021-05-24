@@ -1,0 +1,10 @@
+@import "config";
+
+.app {
+  min-height: 100vh;
+  background-color: $light-color;
+
+  font-family: "Lato", sans-serif;
+  color: black;
+  padding: 0 8px;
+}

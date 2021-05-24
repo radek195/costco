@@ -1,7 +1,57 @@
 @import "../scss/config";
 
 .header {
-  @include mobile-title;
-  background-color: $main-color;
-  color: white;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 10px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 110px;
+  max-width: 1400px;
+
+  &__nav {
+    display: grid;
+    grid-template: "logo basket" "ul ul";
+    height: 70px;
+    flex-wrap: wrap;
+
+    @media screen and #{$tablet} {
+      grid-template: "logo ul basket";
+    }
+  }
+
+  &__logo {
+    @include mobile-logo;
+    @include flex-center;
+    justify-content: flex-start;
+    color: $main-color;
+    grid-area: logo;
+
+    @media screen and #{$tablet} {
+      margin-left: 15px;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    height: 40px;
+    @include flex-center;
+    justify-content: space-around;
+    grid-area: ul;
+
+    @media screen and #{$tablet} {
+      height: 70px;
+    }
+  }
+
+  &__item {
+    @include mobile-subtitle;
+    font-weight: 700;
+    color: black;
+  }
 }
