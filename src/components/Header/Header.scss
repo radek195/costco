@@ -1,0 +1,7 @@
+@import "../scss/config";
+
+.header {
+  @include mobile-title;
+  background-color: $main-color;
+  color: white;
+}
