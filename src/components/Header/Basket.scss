@@ -14,6 +14,10 @@
   &__value {
     @include mobile-subtitle;
     margin-right: 10px;
+
+    @media screen and #{$desktop} {
+      @include desktop-subtitle;
+    }
   }
 
   &__control {

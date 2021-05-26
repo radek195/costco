@@ -1,10 +1,20 @@
 @import "config";
 
 .app {
-  min-height: 100vh;
   background-color: $light-color;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-family: "Lato", sans-serif;
-  color: black;
-  padding: 0 8px;
+  color: $black;
+  padding: 120px 12px 95px 12px;
+  padding-top: 120px;
+
+  @media screen and #{$tablet} {
+    padding-top: 80px;
+  }
 }

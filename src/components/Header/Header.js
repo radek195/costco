@@ -9,20 +9,18 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="header__nav">
-        <Router>
-          <h1 className="header__logo">
-            <Link to="/">Costco</Link>
-          </h1>
-          <Basket />
-          <ul className="header__list">
-            <li className="header__item">
-              <Link to="/teas">Teas</Link>
-            </li>
-            <li className="header__item">
-              <Link to="/coffees">Coffees</Link>
-            </li>
-          </ul>
-        </Router>
+        <h1 className="header__logo">
+          <Link to="/home">Costco</Link>
+        </h1>
+        <Basket />
+        <ul className="header__list">
+          <li className="header__item">
+            <Link to="/teahome">Teas</Link>
+          </li>
+          <li className="header__item">
+            <Link to="/coffees">Coffees</Link>
+          </li>
+        </ul>
       </nav>
     </header>
   );
