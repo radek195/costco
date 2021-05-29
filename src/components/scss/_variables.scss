@@ -8,9 +8,28 @@ $tablet: "(min-width: 701px)";
 $smallDesktop: "(min-width: 1001px)";
 $desktop: "(min-width: 1401px)";
 
-//
+//mixins
 @mixin flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@mixin tile-height {
+  margin: 10px auto;
+  box-sizing: border-box;
+  padding: 20px 20px;
+  height: calc(100vh - 110px - 95px);
+  width: 100%;
+
+  @media screen and #{$tablet} {
+    min-height: 400px;
+    padding: 40px 20px;
+  }
+  @media screen and #{$smallDesktop} {
+    min-height: 500px;
+  }
+  @media screen and #{$desktop} {
+    max-width: 1300px;
+  }
 }

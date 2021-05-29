@@ -1,27 +1,15 @@
 @import "../scss/config";
 
 .homepage {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 20px;
-  box-sizing: border-box;
-  padding: 40px 20px;
   @include flex-center;
   flex-flow: column;
   margin: 30px 0;
-  width: 100%;
   max-width: 800px;
-  margin: auto;
+  @include tile-height;
 
   @media screen and #{$tablet} {
-    min-height: 400px;
-    flex-flow: row;
-  }
-
-  @media screen and #{$smallDesktop} {
-    min-height: 500px;
-  }
-  @media screen and #{$desktop} {
-    max-width: 1300px;
     flex-flow: row;
   }
 

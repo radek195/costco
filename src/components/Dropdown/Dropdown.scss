@@ -1,0 +1,91 @@
+@import "../scss/config";
+
+.dropdown {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px 20px;
+  margin-bottom: 20px;
+
+  @media screen and #{$tablet} {
+    width: 200px;
+    margin-right: 20px;
+  }
+
+  @media screen and #{$desktop} {
+    width: 330px;
+  }
+
+  &__header {
+    @include flex-center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    @include mobile-title;
+
+    @media screen and #{$desktop} {
+      @include desktop-title;
+    }
+  }
+
+  &__show {
+    @include mobile-paragraph;
+    @media screen and #{$desktop} {
+      @include desktop-paragraph;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    position: relative;
+    @include mobile-subtitle;
+    font-weight: 700;
+    margin-bottom: 6px;
+
+    @media screen and #{$desktop} {
+      @include desktop-subtitle;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: center center;
+    transition: 0.3s;
+
+    &--active {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__sublist {
+    height: 0;
+    overflow: hidden;
+    list-style-type: none;
+    margin-left: 10px;
+
+    &--active {
+      height: auto;
+    }
+  }
+
+  &__subitem {
+    font-size: 0;
+    margin-bottom: 4px;
+    @include mobile-paragraph;
+
+    @media screen and #{$desktop} {
+      @include desktop-paragraph;
+    }
+  }
+}

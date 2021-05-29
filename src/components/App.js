@@ -15,7 +15,7 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
-          <Route path="/home" exact>
+          <Route path="/" exact>
             <Homepage />
           </Route>
           <Route path="/teahome" exact>

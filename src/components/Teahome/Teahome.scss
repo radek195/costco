@@ -1,0 +1,11 @@
+@import "../scss/config";
+
+.teahome {
+  @include tile-height;
+  background-color: rgb(139, 139, 139);
+  max-width: 800px;
+
+  @media screen and #{$tablet} {
+    display: flex;
+  }
+}
