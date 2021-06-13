@@ -1,7 +1,6 @@
 @import "../scss/config";
 
 .basket {
-  @include flex-center;
   height: 70px;
   @include flex-center;
   justify-content: flex-end;
@@ -9,12 +8,8 @@
   margin-right: 15px;
 
   &__value {
-    @include mobile-subtitle;
+    @include subtitle;
     margin-right: 10px;
-
-    @media screen and #{$desktop} {
-      @include desktop-subtitle;
-    }
   }
 
   &__control {

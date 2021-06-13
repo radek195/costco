@@ -11,7 +11,7 @@
   height: 110px;
   max-width: 1400px;
   background-color: $light-color;
-
+  z-index: 3;
   @media screen and #{$tablet} {
     height: 70px;
   }
@@ -28,7 +28,7 @@
   }
 
   &__logo {
-    @include mobile-logo;
+    @include logo;
     @include flex-center;
     justify-content: flex-start;
     color: $main-color;
@@ -36,7 +36,7 @@
     margin-left: 15px;
 
     @media screen and #{$desktop} {
-      @include desktop-logo;
+      @include logo;
     }
   }
 
@@ -56,12 +56,8 @@
   }
 
   &__item {
-    @include mobile-subtitle;
+    @include subtitle;
     font-weight: 700;
     color: black;
-
-    @media screen and #{$desktop} {
-      @include desktop-subtitle;
-    }
   }
 }

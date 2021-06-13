@@ -24,20 +24,12 @@
   }
   &__subtitle {
     letter-spacing: 2px;
-    @include mobile-subtitle;
-
-    @media screen and #{$desktop} {
-      @include desktop-subtitle;
-    }
+    @include subtitle;
   }
   &__paragraph {
     display: block;
     letter-spacing: 1px;
-    @include mobile-paragraph;
-
-    @media screen and #{$desktop} {
-      @include desktop-paragraph;
-    }
+    @include paragraph;
   }
 
   &__icon {

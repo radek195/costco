@@ -4,7 +4,7 @@ import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 
 import Header from "./Header/Header";
 import Homepage from "./Homepage/Homepage";
-import Teahome from "./Teahome/Teahome";
+import Teas from "./Teas/Teas";
 import Footer from "./Footer/Footer";
 
 import "./scss/App.scss";
@@ -18,8 +18,8 @@ const App = () => {
           <Route path="/" exact>
             <Homepage />
           </Route>
-          <Route path="/teahome" exact>
-            <Teahome />
+          <Route path="/teas">
+            <Teas />
           </Route>
         </Switch>
         <Footer />

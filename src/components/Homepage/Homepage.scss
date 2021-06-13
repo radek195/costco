@@ -24,23 +24,21 @@
   }
 
   &__title {
-    @include mobile-title;
-    margin-bottom: 20px;
+    @include title;
+    margin-bottom: 10px;
     text-align: center;
 
     @media screen and #{$desktop} {
-      @include desktop-title;
       text-align: left;
     }
   }
 
   &__subtitle {
-    @include mobile-subtitle;
-    margin-bottom: 28px;
+    @include subtitle;
+    margin-bottom: 22px;
     text-align: center;
 
     @media screen and #{$desktop} {
-      @include desktop-subtitle;
       text-align: left;
     }
   }
@@ -60,6 +58,7 @@
     width: 60%;
     max-width: 180px;
     margin: 15px auto;
+    margin-bottom: 0;
 
     @media screen and #{$tablet} {
       margin: auto;

@@ -1,11 +1,12 @@
 @import "../scss/config";
 
-.teahome {
+.teas {
   @include tile-height;
-  background-color: rgb(139, 139, 139);
   max-width: 800px;
+  height: auto;
 
   @media screen and #{$tablet} {
     display: flex;
+    padding: 0;
   }
 }

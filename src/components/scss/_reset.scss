@@ -10,4 +10,10 @@ a {
 
 :root {
   font-size: 12px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+
+:root::-webkit-scrollbar {
+  display: none;
 }

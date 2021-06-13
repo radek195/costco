@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Basket from "./Basket";
 import "./Header.scss";
@@ -15,10 +15,10 @@ const Header = () => {
         <Basket />
         <ul className="header__list">
           <li className="header__item">
-            <Link to="/teahome">Teas</Link>
+            <Link to="/teas/teahome">Teas</Link>
           </li>
           <li className="header__item">
-            <Link to="/coffees">Coffees</Link>
+            <Link to="/coffees/coffeehome">Coffees</Link>
           </li>
         </ul>
       </nav>

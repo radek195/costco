@@ -1,49 +1,45 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
 
 //mobile
-@mixin mobile-logo {
+@mixin logo {
   font-size: 2.4em;
   font-family: "Paytone One", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 3.6px;
+
+  @media screen and #{$smallDesktop} {
+    font-size: 34px;
+  }
 }
 
-@mixin mobile-title {
+@mixin title {
   font-size: 1.5em;
   letter-spacing: 1.2px;
-  font-weight: 700;
+  font-weight: 900;
+
+  @media screen and #{$smallDesktop} {
+    font-size: 24px;
+  }
 }
 
-@mixin mobile-subtitle {
+@mixin subtitle {
   font-size: 1.2em;
   letter-spacing: 1.1px;
-  font-weight: 400;
-}
-
-@mixin mobile-paragraph {
-  font-size: 1em;
-  font-weight: 300;
-}
-
-//desktop
-@mixin desktop-logo {
-  font-size: 34px;
-  font-family: "Paytone One", sans-serif;
-  font-weight: 400;
-}
-
-@mixin desktop-title {
-  font-size: 24px;
   font-weight: 700;
+  @media screen and #{$smallDesktop} {
+    font-size: 18px;
+  }
 }
 
-@mixin desktop-subtitle {
-  font-size: 18px;
+@mixin paragraph {
+  font-size: 1em;
   font-weight: 400;
+  @media screen and #{$smallDesktop} {
+    font-size: 16px;
+  }
 }
 
-@mixin desktop-paragraph {
-  font-size: 16px;
+.fw-light {
   font-weight: 300;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
-import "./Button.scss";
-const Button = ({ text, click }) => {
+import "./style.scss";
+const Main = ({ text, click }) => {
   return (
     <button
       className="button"
@@ -15,4 +15,4 @@ const Button = ({ text, click }) => {
   );
 };
 
-export default Button;
+export default Main;

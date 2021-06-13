@@ -1,0 +1,39 @@
+@import "../../scss/config";
+
+.teahome {
+  @include white-container;
+  &__header {
+    @include title;
+    margin-bottom: 20px;
+  }
+
+  &__info {
+    display: grid;
+    grid-template: "title" "tea" "tea" "tea" "tea";
+
+    @media screen and #{$smallDesktop} {
+      grid-template: "title title" "tea tea" "tea tea";
+      grid-gap: 45px;
+    }
+  }
+  &__tea {
+    margin-bottom: 16px;
+    grid-area: "tea";
+  }
+  &__title {
+    @include subtitle;
+    margin-bottom: 5px;
+  }
+
+  &__description {
+    @include paragraph;
+  }
+
+  &__image {
+    float: left;
+    margin-right: 6px;
+    @media screen and #{$smallDesktop} {
+      margin-right: 13px;
+    }
+  }
+}

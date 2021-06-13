@@ -4,7 +4,7 @@ $light-color: #e2e4f1;
 $black: #2e2e2e;
 
 //breakpoints
-$tablet: "(min-width: 701px)";
+$tablet: "(min-width: 721px)";
 $smallDesktop: "(min-width: 1001px)";
 $desktop: "(min-width: 1401px)";
 
@@ -19,7 +19,7 @@ $desktop: "(min-width: 1401px)";
   margin: 10px auto;
   box-sizing: border-box;
   padding: 20px 20px;
-  height: calc(100vh - 110px - 95px);
+  height: calc(100vh - 110px - 95px - 30px);
   width: 100%;
 
   @media screen and #{$tablet} {
@@ -31,5 +31,15 @@ $desktop: "(min-width: 1401px)";
   }
   @media screen and #{$desktop} {
     max-width: 1300px;
+  }
+}
+
+@mixin white-container {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px 20px;
+
+  @media screen and #{$smallDesktop} {
+    padding: 40px 40px;
   }
 }

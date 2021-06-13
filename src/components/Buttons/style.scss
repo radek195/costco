@@ -16,7 +16,7 @@
   z-index: 1;
 
   @media screen and #{$smallDesktop} {
-    @include desktop-subtitle;
+    @include subtitle;
     height: 55px;
     width: 120px;
   }
@@ -56,4 +56,23 @@
   background-color: $main-color;
   z-index: -1;
   transition: 0.6s ease-out;
+}
+
+.small {
+  border: 2px solid $main-color;
+  background-color: white;
+  height: auto;
+  width: auto;
+  padding: 3px 14px;
+  border-radius: 40px;
+  outline: none;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  overflow: hidden;
+  transition: 0.2s;
+  cursor: pointer;
+  &--active {
+    background-color: $main-color;
+    color: white;
+  }
 }
