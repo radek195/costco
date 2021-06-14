@@ -1,5 +1,6 @@
 import React from "react";
 
+import whiteBasket from "../../../assets/icons/white-basket.svg";
 import black from "../../../assets/black.png";
 import green from "../../../assets/green.png";
 import white from "../../../assets/white.png";
@@ -17,6 +18,13 @@ const TeaCard = ({ tea }) => {
 
   return (
     <div className="teacard">
+      <div className="add-basket">
+        <img
+          src={whiteBasket}
+          alt="white basket"
+          className="add-basket__icon"
+        />
+      </div>
       <img
         className="teacard__image"
         src={image(tea.type)}

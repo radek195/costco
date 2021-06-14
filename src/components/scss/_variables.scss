@@ -43,3 +43,60 @@ $desktop: "(min-width: 1401px)";
     padding: 40px 40px;
   }
 }
+
+.add-basket {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  @include flex-center;
+  background-color: $main-color;
+  cursor: pointer;
+  transition: 0.1s;
+
+  &:hover {
+    animation: bounce 0.3s ease both;
+  }
+  &:hover > img {
+    animation: shake 0.3s ease;
+    // transform: rotate(40deg);
+  }
+
+  &__icon {
+    transition: 0.1s;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translate(50%, -50%) scale();
+  }
+
+  50% {
+    transform: translate(50%, -50%) scale(1.05);
+  }
+
+  100% {
+    transform: translate(50%, -50%) scale(1.1);
+  }
+}

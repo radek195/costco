@@ -1,10 +1,14 @@
 import React from "react";
 
+import whiteBasket from "../../../assets/icons/white-basket.svg";
 import "./CoffeeCard.scss";
 
 const CoffeeCard = ({ coffee }) => {
   return (
     <div className="coffeecard">
+      <div className="add-basket">
+        <img src={whiteBasket} alt="white basket" />
+      </div>
       <div>
         <h3 className="coffeecard__title">
           <span className="fw-light">{coffee.category}</span>
