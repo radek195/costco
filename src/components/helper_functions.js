@@ -14,3 +14,11 @@ export const priceSort = (array) => {
 
   return filtered;
 };
+
+export const isTea = (content) => {
+  if (content[0].title === "Classic") {
+    return true;
+  } else if (content[0].title === "Arabica") {
+    return false;
+  }
+};

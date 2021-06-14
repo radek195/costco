@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 
-import TeasDropdown from "./TeasDropdown/TeasDropdown";
+import Dropdown from "../Dropdown/Dropdown";
 import Teahome from "./Teahome/Teahome";
-import TeaProducts from "./TeaProducts/TeaProducts";
+import Products from "../Products/Products";
 import "./Teas.scss";
 
 const teas = [
@@ -30,6 +30,7 @@ const teas = [
 
 const products = [
   {
+    productId: 11,
     title: "Assam Gold",
     type: "Black",
     quantity: 80,
@@ -37,6 +38,7 @@ const products = [
     category: "classic",
   },
   {
+    productId: 12,
     title: "Bollywood Chai",
     type: "Black",
     quantity: 80,
@@ -44,6 +46,7 @@ const products = [
     category: "classic",
   },
   {
+    productId: 13,
     title: "Chinese Sencha",
     type: "Green",
     quantity: 80,
@@ -51,6 +54,7 @@ const products = [
     category: "classic",
   },
   {
+    productId: 14,
     title: "Bai Mu Dan",
     type: "White",
     quantity: 60,
@@ -58,6 +62,7 @@ const products = [
     category: "classic",
   },
   {
+    productId: 15,
     title: "Divine Elixir",
     type: "White",
     quantity: 20,
@@ -65,6 +70,7 @@ const products = [
     category: "classic",
   },
   {
+    productId: 16,
     title: "Spiced Pie",
     type: "Pu-erh",
     quantity: 120,
@@ -72,20 +78,23 @@ const products = [
     category: "classic",
   },
   {
+    productId: 17,
     title: "Earl Grey",
     type: "Black",
     quantity: 60,
-    price: 4.99,
+    price: 18.99,
     category: "flavoured",
   },
   {
+    productId: 18,
     title: "Jasmine",
     type: "Green",
     quantity: 20,
-    price: 19.99,
+    price: 29.99,
     category: "flavoured",
   },
   {
+    productId: 19,
     title: "Masala",
     type: "Black",
     quantity: 120,
@@ -93,6 +102,7 @@ const products = [
     category: "flavoured",
   },
   {
+    productId: 20,
     title: "Yerba Mate",
     type: "Black",
     quantity: 300,
@@ -112,13 +122,18 @@ const Teas = () => {
 
   return (
     <section className="teas">
-      <TeasDropdown dropped={dropped} setDropped={setDropped} content={teas} />
+      <Dropdown
+        dropped={dropped}
+        setDropped={setDropped}
+        content={teas}
+        title="Teas"
+      />
       <Switch>
         <Route path="/teas/teahome" exact>
           <Teahome setDropped={setDropped} />
         </Route>
         <Route path="/teas/products" exact>
-          <TeaProducts products={filteredTeas} />
+          <Products type={"tea"} products={filteredTeas} />
         </Route>
       </Switch>
     </section>

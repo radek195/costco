@@ -2,6 +2,7 @@
 
 .teahome {
   @include white-container;
+
   &__header {
     @include title;
     margin-bottom: 20px;

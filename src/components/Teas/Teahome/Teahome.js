@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 
-import black from "../../../assets/black.svg";
-import green from "../../../assets/green.svg";
-import white from "../../../assets/white.svg";
-import puerh from "../../../assets/puerh.svg";
+import black from "../../../assets/black.png";
+import green from "../../../assets/green.png";
+import white from "../../../assets/white.png";
+import puerh from "../../../assets/puerh.png";
 
 import "./Teahome.scss";
 

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import Button from "../Buttons/Main.js";
 import "./Homepage.scss";
-import coffee from "../../assets/home-img.svg";
+import coffee from "../../assets/home-img.png";
 
 const Homepage = () => {
   return (
@@ -16,20 +16,10 @@ const Homepage = () => {
         <p className="homepage__subtitle">Check out our offer:</p>
         <div className="homepage__buttons">
           <Link to="/teas/teahome">
-            <Button
-              text={"teas"}
-              click={() => {
-                console.log("hello!");
-              }}
-            />
+            <Button text={"teas"} />
           </Link>
           <Link to="/coffees/coffeehome">
-            <Button
-              text={"coffees"}
-              click={() => {
-                console.log("hello!");
-              }}
-            />
+            <Button text={"coffees"} />
           </Link>
         </div>
       </div>

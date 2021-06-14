@@ -1,14 +1,9 @@
 import React from "react";
 
 import "./style.scss";
-const Main = ({ text, click }) => {
+const Main = ({ text }) => {
   return (
-    <button
-      className="button"
-      onClick={() => {
-        click();
-      }}
-    >
+    <button className="button">
       <div className="fill"></div>
       {text}
     </button>

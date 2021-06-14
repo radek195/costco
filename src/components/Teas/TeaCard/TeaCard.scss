@@ -1,0 +1,43 @@
+@import "../../scss/config";
+
+.teacard {
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px rgba($black, 0.2);
+  box-sizing: border-box;
+  padding: 10px;
+  width: 180px;
+  height: 280px;
+  position: relative;
+  border-radius: 5px;
+  margin: 0 auto;
+
+  @media screen and #{$smallDesktop} {
+    width: 210px;
+    height: 325px;
+  }
+
+  &__image {
+    display: block;
+    width: 120px;
+    margin: 20px auto;
+  }
+
+  &__title {
+    text-align: center;
+    @include subtitle;
+    margin-bottom: 5px;
+  }
+
+  &__field {
+    @include subtitle;
+    font-weight: 400;
+    margin-bottom: 3px;
+  }
+
+  &__price {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    margin-bottom: 0;
+  }
+}

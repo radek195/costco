@@ -1,0 +1,12 @@
+@import "../scss/config";
+
+.coffees {
+  @include tile-height;
+  max-width: 1000px;
+  height: auto;
+
+  @media screen and #{$tablet} {
+    display: flex;
+    padding: 0;
+  }
+}

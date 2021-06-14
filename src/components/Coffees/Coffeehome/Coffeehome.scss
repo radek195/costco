@@ -1,0 +1,60 @@
+@import "../../scss/config";
+
+.coffeehome {
+  @include white-container;
+  position: relative;
+
+  &__header {
+    @include title;
+    margin-bottom: 20px;
+    grid-area: "title";
+  }
+
+  &__info {
+    display: grid;
+    grid-template: "title" "coffee" "coffee";
+
+    @media screen and #{$smallDesktop} {
+      grid-template: "title title" "coffee" "coffee";
+      grid-gap: 45px;
+    }
+
+    @media screen and #{$smallDesktop} {
+      width: 50%;
+    }
+  }
+  &__tea {
+    margin-bottom: 16px;
+    grid-area: "tea";
+  }
+  &__title {
+    @include subtitle;
+    margin-bottom: 5px;
+  }
+
+  &__description {
+    @include paragraph;
+  }
+
+  &__image {
+    float: left;
+    width: 60px;
+    margin-right: 6px;
+    @media screen and #{$smallDesktop} {
+      margin-right: 13px;
+    }
+  }
+
+  &__photo {
+    display: none;
+
+    @media screen and #{$smallDesktop} {
+      display: block;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      left: 75%;
+      transform: translateX(-50%);
+    }
+  }
+}
