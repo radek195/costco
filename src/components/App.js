@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 
@@ -12,10 +12,27 @@ import Footer from "./Footer/Footer";
 import "./scss/App.scss";
 
 const App = () => {
+  const [activeTab, setActiveTab] = useState();
+
+  window.addEventListener("click", () => {
+    const setTab = () => {
+      if (window.location.href.includes("teas")) {
+        setActiveTab("teas");
+        return;
+      } else if (window.location.href.includes("coffees")) {
+        setActiveTab("coffees");
+        return;
+      }
+      setActiveTab("none");
+    };
+
+    setTab();
+  });
+
   return (
     <div className="app">
       <Router>
-        <Header />
+        <Header activeTab={activeTab} />
         <Switch>
           <Route path="/" exact>
             <Homepage />

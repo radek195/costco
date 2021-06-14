@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
 import Basket from "./Basket";
 import "./Header.scss";
 
-const Header = () => {
+const Header = ({ activeTab }) => {
   return (
     <header className="header">
       <nav className="header__nav">
@@ -15,9 +15,19 @@ const Header = () => {
         <Basket />
         <ul className="header__list">
           <li className="header__item">
+            <div
+              className={`indicator ${
+                activeTab === "teas" ? "indicator--active" : ""
+              }`}
+            ></div>
             <Link to="/teas/teahome">Teas</Link>
           </li>
           <li className="header__item">
+            <div
+              className={`indicator ${
+                activeTab === "coffees" ? "indicator--active" : ""
+              }`}
+            ></div>
             <Link to="/coffees/coffeehome">Coffees</Link>
           </li>
         </ul>
