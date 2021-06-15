@@ -1,4 +1,7 @@
 import React from "react";
+import { connect } from "react-redux";
+
+import { addToBasket } from "../../../actions";
 
 import whiteBasket from "../../../assets/icons/white-basket.svg";
 import black from "../../../assets/black.png";
@@ -8,7 +11,7 @@ import puerh from "../../../assets/puerh.png";
 
 import "./TeaCard.scss";
 
-const TeaCard = ({ tea }) => {
+const TeaCard = ({ tea, addToBasket }) => {
   const image = (type) => {
     if (type === "Green") return green;
     if (type === "Black") return black;
@@ -18,7 +21,12 @@ const TeaCard = ({ tea }) => {
 
   return (
     <div className="teacard">
-      <div className="add-basket">
+      <div
+        className="add-basket"
+        onClick={() => {
+          addToBasket(tea.productId);
+        }}
+      >
         <img
           src={whiteBasket}
           alt="white basket"
@@ -44,4 +52,4 @@ const TeaCard = ({ tea }) => {
   );
 };
 
-export default TeaCard;
+export default connect(null, { addToBasket })(TeaCard);

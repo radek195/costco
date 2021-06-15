@@ -22,3 +22,10 @@ export const isTea = (content) => {
     return false;
   }
 };
+
+export const returnByList = (arr, name) => {
+  const types = arr.filter((item) => {
+    return item.list === name;
+  });
+  return types;
+};

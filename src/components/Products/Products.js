@@ -4,7 +4,7 @@ import Small from "../Buttons/Small";
 import TeaCard from "../Teas/TeaCard/TeaCard";
 import CoffeeCard from "../Coffees/CoffeeCard/CoffeeCard";
 
-import { priceSort } from "../helper_functions";
+import { priceSort, returnByList } from "../helper_functions";
 import "./Products.scss";
 
 const Products = ({ type, products }) => {
@@ -12,7 +12,8 @@ const Products = ({ type, products }) => {
   const [filter, setFilter] = useState("");
 
   useEffect(() => {
-    setToRender(products);
+    const filteredProducts = returnByList(products, type);
+    setToRender(filteredProducts);
     setFilter("");
   }, [products]);
 

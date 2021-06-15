@@ -1,12 +1,20 @@
 import React from "react";
+import { connect } from "react-redux";
+
+import { addToBasket } from "../../../actions";
 
 import whiteBasket from "../../../assets/icons/white-basket.svg";
 import "./CoffeeCard.scss";
 
-const CoffeeCard = ({ coffee }) => {
+const CoffeeCard = ({ coffee, addToBasket }) => {
   return (
     <div className="coffeecard">
-      <div className="add-basket">
+      <div
+        className="add-basket"
+        onClick={() => {
+          addToBasket(coffee.productId);
+        }}
+      >
         <img src={whiteBasket} alt="white basket" />
       </div>
       <div>
@@ -29,4 +37,4 @@ const CoffeeCard = ({ coffee }) => {
   );
 };
 
-export default CoffeeCard;
+export default connect(null, { addToBasket })(CoffeeCard);
