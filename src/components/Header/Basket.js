@@ -11,7 +11,7 @@ const Basket = ({ basket, addToBasket, subtractFromBasket }) => {
   const [extended, setExtended] = useState(false);
 
   const basketRef = useRef(null);
-
+  
   window.addEventListener("click", (e) => {
     if (
       basketRef.current !== e.target &&

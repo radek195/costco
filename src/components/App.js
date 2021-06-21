@@ -30,7 +30,7 @@ const App = () => {
       <Router>
         <Header activeTab={activeTab} />
         <Switch>
-          <Route path="/" exact>
+          <Route path="/costco" exact>
             <Homepage />
           </Route>
           <Route path="/teas">
