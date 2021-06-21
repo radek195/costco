@@ -1,7 +1,13 @@
-export const addToBasket = (itemId) => {
-  console.log("add");
+export const addToBasket = (item) => {
   return {
     type: "ADD_ITEM",
-    payload: itemId,
+    payload: item,
+  };
+};
+
+export const subtractFromBasket = (item) => {
+  return {
+    type: "SUBTRACT_ITEM",
+    payload: item,
   };
 };

@@ -10,7 +10,7 @@ import { returnByList } from "../helper_functions";
 import "./Coffees.scss";
 
 const Coffees = ({ types, products }) => {
-  const [dropped, setDropped] = useState("");
+  const [dropped, setDropped] = useState("all");
 
   const filteredCoffees = products.filter((product) => {
     let choice = dropped === "all" ? dropped : product.category;

@@ -7,12 +7,19 @@ import whiteBasket from "../../../assets/icons/white-basket.svg";
 import "./CoffeeCard.scss";
 
 const CoffeeCard = ({ coffee, addToBasket }) => {
+  const basketItem = {
+    id: coffee.productId,
+    name: coffee.category + " " + coffee.title,
+    price: coffee.price,
+    amount: 1,
+  };
+
   return (
     <div className="coffeecard">
       <div
         className="add-basket"
         onClick={() => {
-          addToBasket(coffee.productId);
+          addToBasket(basketItem);
         }}
       >
         <img src={whiteBasket} alt="white basket" />

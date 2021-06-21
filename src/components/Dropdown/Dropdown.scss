@@ -11,6 +11,7 @@
   }
 
   @media screen and #{$smallDesktop} {
+    width: 230px;
     padding: 25px 25px;
   }
   @media screen and #{$desktop} {

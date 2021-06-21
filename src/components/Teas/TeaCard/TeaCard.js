@@ -11,12 +11,19 @@ import puerh from "../../../assets/puerh.png";
 
 import "./TeaCard.scss";
 
+const image = (type) => {
+  if (type === "Green") return green;
+  if (type === "Black") return black;
+  if (type === "White") return white;
+  if (type === "Pu-erh") return puerh;
+};
+
 const TeaCard = ({ tea, addToBasket }) => {
-  const image = (type) => {
-    if (type === "Green") return green;
-    if (type === "Black") return black;
-    if (type === "White") return white;
-    if (type === "Pu-erh") return puerh;
+  const basketItem = {
+    id: tea.productId,
+    name: tea.title,
+    price: tea.price,
+    amount: 1,
   };
 
   return (
@@ -24,7 +31,7 @@ const TeaCard = ({ tea, addToBasket }) => {
       <div
         className="add-basket"
         onClick={() => {
-          addToBasket(tea.productId);
+          addToBasket(basketItem);
         }}
       >
         <img

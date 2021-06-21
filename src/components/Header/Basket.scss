@@ -1,15 +1,21 @@
 @import "../scss/config";
 
 .basket {
+  cursor: pointer;
   height: 70px;
   @include flex-center;
   justify-content: flex-end;
   grid-area: basket;
   margin-right: 15px;
+  transition: 1s;
 
   &__value {
     @include subtitle;
     margin-right: 10px;
+
+    @media screen and #{$smallDesktop} {
+      min-width: 75px;
+    }
   }
 
   &__control {
@@ -19,6 +25,12 @@
     @include flex-center;
     position: relative;
     border-radius: 25px;
+
+    &--active {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      box-shadow: 2px 3px 2px 1px rgba($black, 0.2);
+    }
   }
 
   &__total {
@@ -33,5 +45,75 @@
     top: -5px;
     right: -5px;
     line-height: 0;
+  }
+}
+
+.extended.show {
+  display: block;
+}
+
+.extended {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  width: 270px;
+  list-style-type: none;
+  padding: 10px;
+  padding-top: 16px;
+  box-sizing: border-box;
+  z-index: 2;
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  bottom: 0;
+  right: 0;
+  transform: translateY(100%);
+  background-color: white;
+  box-shadow: 2px 3px 2px 1px rgba($black, 0.2);
+  @include subtitle;
+
+  @media screen and #{$tablet} {
+    width: 450px;
+    padding: 20px;
+  }
+
+  &__item {
+    @include flex-center;
+    flex-direction: row;
+    margin-bottom: 16px;
+  }
+
+  &__name {
+    display: inline-block;
+    width: 70%;
+  }
+
+  &__control {
+    @include flex-center;
+    flex-direction: row;
+  }
+
+  &__amount {
+    width: 30px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  &__sign {
+    @include flex-center;
+    border-radius: 50%;
+    @include subtitle;
+    width: 26px;
+    height: 26px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    @media screen and #{$tablet} {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &__icon {
+    width: 90%;
   }
 }

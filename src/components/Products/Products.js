@@ -15,7 +15,7 @@ const Products = ({ type, products }) => {
     const filteredProducts = returnByList(products, type);
     setToRender(filteredProducts);
     setFilter("");
-  }, [products]);
+  }, [products, type]);
 
   const sortPrices = () => {
     const filtered = priceSort(toRender);

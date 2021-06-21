@@ -15,18 +15,14 @@ const App = () => {
   const [activeTab, setActiveTab] = useState();
 
   window.addEventListener("click", () => {
-    const setTab = () => {
-      if (window.location.href.includes("teas")) {
-        setActiveTab("teas");
-        return;
-      } else if (window.location.href.includes("coffees")) {
-        setActiveTab("coffees");
-        return;
-      }
-      setActiveTab("none");
-    };
-
-    setTab();
+    if (window.location.href.includes("teas")) {
+      setActiveTab("teas");
+      return;
+    } else if (window.location.href.includes("coffees")) {
+      setActiveTab("coffees");
+      return;
+    }
+    setActiveTab("none");
   });
 
   return (
