@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/costco/static/css/main.06c18ee0.chunk.css",
-    "main.js": "/costco/static/js/main.c8b87e24.chunk.js",
-    "main.js.map": "/costco/static/js/main.c8b87e24.chunk.js.map",
+    "main.js": "/costco/static/js/main.8e1192be.chunk.js",
+    "main.js.map": "/costco/static/js/main.8e1192be.chunk.js.map",
     "runtime-main.js": "/costco/static/js/runtime-main.5297559e.js",
     "runtime-main.js.map": "/costco/static/js/runtime-main.5297559e.js.map",
     "static/js/2.4015140b.chunk.js": "/costco/static/js/2.4015140b.chunk.js",
@@ -30,6 +30,6 @@
     "static/js/runtime-main.5297559e.js",
     "static/js/2.4015140b.chunk.js",
     "static/css/main.06c18ee0.chunk.css",
-    "static/js/main.c8b87e24.chunk.js"
+    "static/js/main.8e1192be.chunk.js"
   ]
 }
