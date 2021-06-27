@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/costco/static/css/main.06c18ee0.chunk.css",
-    "main.js": "/costco/static/js/main.8e1192be.chunk.js",
-    "main.js.map": "/costco/static/js/main.8e1192be.chunk.js.map",
+    "main.css": "/costco/static/css/main.48883456.chunk.css",
+    "main.js": "/costco/static/js/main.b694686f.chunk.js",
+    "main.js.map": "/costco/static/js/main.b694686f.chunk.js.map",
     "runtime-main.js": "/costco/static/js/runtime-main.5297559e.js",
     "runtime-main.js.map": "/costco/static/js/runtime-main.5297559e.js.map",
-    "static/js/2.4015140b.chunk.js": "/costco/static/js/2.4015140b.chunk.js",
-    "static/js/2.4015140b.chunk.js.map": "/costco/static/js/2.4015140b.chunk.js.map",
+    "static/js/2.1a2ad309.chunk.js": "/costco/static/js/2.1a2ad309.chunk.js",
+    "static/js/2.1a2ad309.chunk.js.map": "/costco/static/js/2.1a2ad309.chunk.js.map",
     "index.html": "/costco/index.html",
-    "static/css/main.06c18ee0.chunk.css.map": "/costco/static/css/main.06c18ee0.chunk.css.map",
-    "static/js/2.4015140b.chunk.js.LICENSE.txt": "/costco/static/js/2.4015140b.chunk.js.LICENSE.txt",
+    "static/css/main.48883456.chunk.css.map": "/costco/static/css/main.48883456.chunk.css.map",
+    "static/js/2.1a2ad309.chunk.js.LICENSE.txt": "/costco/static/js/2.1a2ad309.chunk.js.LICENSE.txt",
     "static/media/arabica bean.0f133d0c.svg": "/costco/static/media/arabica bean.0f133d0c.svg",
     "static/media/arrow.5c9eb33f.svg": "/costco/static/media/arrow.5c9eb33f.svg",
     "static/media/black-basket.b023da90.svg": "/costco/static/media/black-basket.b023da90.svg",
@@ -28,8 +28,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.5297559e.js",
-    "static/js/2.4015140b.chunk.js",
-    "static/css/main.06c18ee0.chunk.css",
-    "static/js/main.8e1192be.chunk.js"
+    "static/js/2.1a2ad309.chunk.js",
+    "static/css/main.48883456.chunk.css",
+    "static/js/main.b694686f.chunk.js"
   ]
 }
