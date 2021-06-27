@@ -15,10 +15,10 @@ const Homepage = () => {
         </h2>
         <p className="homepage__subtitle">Check out our offer:</p>
         <div className="homepage__buttons">
-          <Link to="/teas/teahome">
+          <Link to="/costco/teas/teahome">
             <Main>Teas</Main>
           </Link>
-          <Link to="/coffees/coffeehome">
+          <Link to="/costco/coffees/coffeehome">
             <Main>Coffees</Main>
           </Link>
         </div>
