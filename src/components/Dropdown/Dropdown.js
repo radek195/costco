@@ -16,7 +16,9 @@ const Dropdown = ({ content, dropped, setDropped, title }) => {
   const renderList = content.map((item) => {
     return (
       <Link
-        to={isTea(content) ? "/teas/products" : "/coffees/products"}
+        to={
+          isTea(content) ? "/costco/teas/products" : "/costco/coffees/products"
+        }
         key={item.title}
       >
         <li className="dropdown__item" onClick={() => setDropped(item.title)}>
@@ -61,8 +63,8 @@ const Dropdown = ({ content, dropped, setDropped, title }) => {
           <Link
             to={
               content[0].title === "Classic"
-                ? "/teas/products"
-                : "/coffees/products"
+                ? "/costco/teas/products"
+                : "/costco/coffees/products"
             }
           >
             <p className="dropdown__show" onClick={() => setDropped("all")}>

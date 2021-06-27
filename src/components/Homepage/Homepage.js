@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import Button from "../Buttons/Main.js";
+import Main from "../Buttons/Main.js";
 import "./Homepage.scss";
 import coffee from "../../assets/home-img.png";
 
@@ -16,10 +16,10 @@ const Homepage = () => {
         <p className="homepage__subtitle">Check out our offer:</p>
         <div className="homepage__buttons">
           <Link to="/teas/teahome">
-            <Button text={"teas"} />
+            <Main>Teas</Main>
           </Link>
           <Link to="/coffees/coffeehome">
-            <Button text={"coffees"} />
+            <Main>Coffees</Main>
           </Link>
         </div>
       </div>

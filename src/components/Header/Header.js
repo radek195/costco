@@ -10,7 +10,7 @@ const Header = ({ activeTab }) => {
     <header className="header">
       <nav className="header__nav">
         <h1 className="header__logo">
-          <Link to="/">Costco</Link>
+          <Link to="/costco">Costco</Link>
         </h1>
         <Basket />
         <ul className="header__list">
@@ -20,7 +20,7 @@ const Header = ({ activeTab }) => {
                 activeTab === "teas" ? "indicator--active" : ""
               }`}
             ></div>
-            <Link to="/teas/teahome">Teas</Link>
+            <Link to="/costco/teas/teahome">Teas</Link>
           </li>
           <li className="header__item">
             <div
@@ -28,7 +28,7 @@ const Header = ({ activeTab }) => {
                 activeTab === "coffees" ? "indicator--active" : ""
               }`}
             ></div>
-            <Link to="/coffees/coffeehome">Coffees</Link>
+            <Link to="/costco/coffees/coffeehome">Coffees</Link>
           </li>
         </ul>
       </nav>

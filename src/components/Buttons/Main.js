@@ -1,11 +1,11 @@
 import React from "react";
 
 import "./style.scss";
-const Main = ({ text }) => {
+const Main = ({ children, handleClick }) => {
   return (
-    <button className="button">
+    <button onClick={() => handleClick()} className="button">
       <div className="fill"></div>
-      {text}
+      {children}
     </button>
   );
 };

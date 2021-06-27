@@ -27,10 +27,10 @@ const Teas = ({ types, products, basket }) => {
         title="Teas"
       />
       <Switch>
-        <Route path="/teas/teahome" exact>
+        <Route path="/costco/teas/teahome" exact>
           <Teahome setDropped={setDropped} />
         </Route>
-        <Route path="/teas/products" exact>
+        <Route path="/costco/teas/products" exact>
           <Products type={"tea"} products={filteredTeas} />
         </Route>
       </Switch>

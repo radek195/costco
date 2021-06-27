@@ -1,6 +1,6 @@
 import React from "react";
 
-const Small = ({ text, click, addClass }) => {
+const Small = ({ text, click = () => {}, addClass }) => {
   return (
     <button
       className={`small ${addClass}`}

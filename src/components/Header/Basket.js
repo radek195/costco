@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
 
 import BasketItem from "./BasketItem";
+import Main from "../Buttons/Main";
+import Modal from "../Popup/Modal";
 
 import blackbasket from "../../assets/icons/black-basket.svg";
 import "./Basket.scss";
@@ -9,9 +11,10 @@ import "./Basket.scss";
 const Basket = ({ basket, addToBasket, subtractFromBasket }) => {
   const [value, setValue] = useState(0);
   const [extended, setExtended] = useState(false);
+  const [modal, setModal] = useState(false);
 
   const basketRef = useRef(null);
-  
+
   window.addEventListener("click", (e) => {
     if (
       basketRef.current !== e.target &&
@@ -56,6 +59,20 @@ const Basket = ({ basket, addToBasket, subtractFromBasket }) => {
         <div className="basket__total">{basket.length}</div>
         <ul className={`extended ${extended ? "show" : ""}`}>
           {renderExtendedBasket}
+          <Main
+            handleClick={() => {
+              setModal(true);
+            }}
+          >
+            Checkout &gt;
+          </Main>
+          <Modal
+            value={value}
+            isOpen={modal}
+            close={() => {
+              setModal(false);
+            }}
+          ></Modal>
         </ul>
       </div>
     </div>

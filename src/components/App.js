@@ -33,10 +33,10 @@ const App = () => {
           <Route path="/costco" exact>
             <Homepage />
           </Route>
-          <Route path="/teas">
+          <Route path="/costco/teas">
             <Teas />
           </Route>
-          <Route path="/coffees">
+          <Route path="/costco/coffees">
             <Coffees />
           </Route>
         </Switch>

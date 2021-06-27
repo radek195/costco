@@ -24,27 +24,26 @@ const basketReducer = (state = [], action) => {
       return [...prevState, action.payload];
 
     case "SUBTRACT_ITEM":
-    
       for (let item of prevState) {
         if (item.id === action.payload.id) {
           item.amount -= 1;
 
           // if the certain product amount is equal 0, filter out this item and return result
           if (item.amount === 0) {
-
             //filter the product
             const newState = prevState.filter((prod) => {
               if (prod.id === action.payload.id) {
                 return false;
               }
-              return true
-            })
+              return true;
+            });
             return [...newState];
           }
-    
+
           return [...prevState];
         }
       }
+      break;
     default:
       return state;
   }

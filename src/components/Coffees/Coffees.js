@@ -27,10 +27,10 @@ const Coffees = ({ types, products }) => {
           title="Coffees"
         />
         <Switch>
-          <Route path="/coffees/coffeehome" exact>
+          <Route path="/costco/coffees/coffeehome" exact>
             <Coffeehome setDropped={setDropped} />
           </Route>
-          <Route path="/coffees/products" exact>
+          <Route path="/costco/coffees/products" exact>
             <Products type={"coffee"} products={filteredCoffees} />
           </Route>
         </Switch>
