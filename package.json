@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@lhci/cli": "^0.14.0",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -21,6 +22,7 @@
     "preview": "set PORT=3006 && react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "lighthouse": "lhci autorun",
     "test:func": "npx playwright test",
     "test:func:debug": "npx playwright test --debug",
     "eject": "react-scripts eject"
